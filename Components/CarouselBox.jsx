@@ -7,15 +7,6 @@ import Link from 'next/link';
 
 const CarouselBox = () => {
 
-    // const [isHover, setHover] = useEffect(false);
-
-    // const TurnHoverStatus = () => {
-    //     setHover(true)
-    // }
-
-    // const hideHoverStatus = () => {
-    //     setHover(false)
-    // }
 
     var items = [
         {
@@ -40,8 +31,8 @@ const CarouselBox = () => {
             link: "/explore/magic-pencil-return"
         },
         {
-            name: "Random Name #4",
-            description: "Hello World!",
+            name: "Suit Boy",
+            description: "SUITBOY - Indian Superhero",
             gif: "/media/suite-boy-gif.webp",
             background: "/media/suit-boy-thumbnail.png",
             link: "/explore/suitboy"
@@ -129,7 +120,10 @@ function Item(props) {
                 {/* Tumbnail */}
                 <Paper
                     sx={{
-                        margin: "10px",
+                        margin: {
+                            md: "10px",
+                            sm: "0px"
+                        },
                         padding: "60px",
                         backgroundImage: `url('${props.item.background}')`,
                         backgroundRepeat: "no-repeat",

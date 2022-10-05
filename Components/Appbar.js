@@ -16,7 +16,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Drawer, ImageListItem, MenuList } from '@mui/material';
 
-const pages = ['videos', 'characters', 'shop', "blogs", "about", "contact"];
+const pages = ['shows', 'characters', 'shop', "blogs", "about", "contact"];
 
 const settings = ['account', 'signup', "login"];
 
