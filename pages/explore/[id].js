@@ -9,7 +9,11 @@ function show() {
 
     return (
         <Layout>
+
             <div>Path: {router.query.id}</div>
+            {/* Video media - trailer/show*/}
+
+
         </Layout>
     )
 }

@@ -5,48 +5,60 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, Grid } from '@mui/material';
 import Link from 'next/link';
+import { Box } from '@mui/system';
 
 
 function ExploreCard({ item }) {
   return (
+
     <Card sx={{
       margin: "3px",
-      // width: {
-      //   xs: "100%",
-      //   md: "250px",
-      //   lg: "230",
-      //   xl: "220"
-      // },
-      width: 300,
+      width: {
+        xl: "220px",
+        lg: "230px",
+        md: "250px",
+        sm: "350px",
+        xs: "100%",
+      },
+      maxWidth: {
+        xl: "500px",
+        lg: "400px",
+        md: "300px"
+      },
       flexGrow: 1
-
     }}  >
 
       <Link href={`/explore/` + item?.slug}>
 
         <CardActionArea >
+
+          {/* Image */}
           <CardMedia
             component="img"
-            image={item.imageUrl}
+            image={item?.imageUrl}
             alt="Poster"
             sx={{
               objectFit: "contain",
-
-
+              width: "100%",
             }}
 
           />
+
+          {/* Title and Desc */}
           <CardContent>
             <Typography gutterBottom variant="h5" component="div" noWrap>
-              {item.title}
+              {item?.title}
             </Typography>
             <Typography variant="body2" color="text.secondary" noWrap>
-              {item.desc}
+              {item?.desc}
             </Typography>
           </CardContent>
+
         </CardActionArea>
+
       </Link>
     </Card>
+
   )
 }
 

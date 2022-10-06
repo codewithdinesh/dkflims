@@ -15,6 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Drawer, ImageListItem, MenuList } from '@mui/material';
+import { Router, useRouter } from 'next/router';
 
 const pages = ['shows', 'characters', 'shop', "blogs", "about", "contact"];
 
@@ -25,6 +26,9 @@ const drawerWidth = 240;
 const Appbar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+
+
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -98,15 +102,16 @@ const Appbar = () => {
                             <MenuList sx={{
                                 color: "white"
                             }}>
-                                {pages.map((page) => (
+                                {pages.map((page, key) => (
 
-                                    <Link href={page}>
+                                    < Link href={"/" + page} >
 
-                                        <MenuItem key={page} onClick={handleCloseNavMenu} sx={{
+                                        <MenuItem key={key} onClick={handleCloseNavMenu} sx={{
                                             ":hover": {
                                                 backgroundColor: "#ffffff46"
                                             }
                                         }}>
+                                            {console.log("/" + page)}
                                             <Typography textAlign="center" textTransform={"capitalize"}>{page}</Typography>
                                         </MenuItem>
                                     </Link>
@@ -147,7 +152,7 @@ const Appbar = () => {
                     {/* Desktop Nav*/}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Link href={page}>
+                            <Link href={"/" + page}>
                                 <Button
                                     key={page}
                                     onClick={handleCloseNavMenu}
@@ -202,7 +207,7 @@ const Appbar = () => {
                 </Toolbar>
             </Container>
 
-        </AppBar>
+        </AppBar >
     );
 };
 export default Appbar;

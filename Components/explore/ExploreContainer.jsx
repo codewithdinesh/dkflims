@@ -9,7 +9,14 @@ function ExploreContainer({ category, item }) {
 
             <h1>{category}</h1>
             <Grid container
-                direction="row">
+                direction="row"
+                sx={
+                    {
+                        display: "flex",
+                        flexGrow: 1
+                    }
+                }
+            >
                 {
                     item?.map((i, key) => {
                         return <ExploreCard key={key} item={i} />

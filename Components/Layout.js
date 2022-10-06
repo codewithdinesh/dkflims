@@ -1,11 +1,16 @@
 
+import { Container } from "@mui/system"
 import Header from "./Header"
 
 export default function Layout({ children }) {
     return (
         <>
             <Header />
-            <main>{children}</main>
+            <Container maxWidth={"xl"}>
+
+                <main>{children}</main>
+
+            </Container>
         </>
     )
 }

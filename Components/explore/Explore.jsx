@@ -7,7 +7,7 @@ import ExploreContainer from './ExploreContainer'
 const item = [
     {
 
-        imageUrl: "/media/suit-boy-thumbnail.png",
+        // imageUrl: "",
         title: "Suit Boy",
         desc: "Suit boy is indian superman web series",
         slug: "suit-boy"
