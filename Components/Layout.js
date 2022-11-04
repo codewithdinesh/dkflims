@@ -2,15 +2,25 @@
 import { Container } from "@mui/system"
 import Header from "./Header"
 
-export default function Layout({ children }) {
-    return (
-        <>
-            <Header />
-            <Container maxWidth={"xl"}>
+// export default function Layout({ children }) {
+//     return (
+        
+//     )
+// }
 
-                <main>{children}</main>
+import React, { Component } from 'react'
 
-            </Container>
-        </>
-    )
+export default class Layout extends Component {
+    render() {
+        return (
+            <>
+                <Header />
+                <Container maxWidth={"xl"} >
+
+                    <main>{this.props.children}</main>
+
+                </Container>
+            </>
+        )
+    }
 }

@@ -102,16 +102,16 @@ const Appbar = () => {
                             <MenuList sx={{
                                 color: "white"
                             }}>
-                                {pages.map((page, key) => (
+                                {pages.map((page) => (
 
-                                    < Link href={"/" + page} >
+                                    < Link href={"/" + page} key={page} >
 
-                                        <MenuItem key={key} onClick={handleCloseNavMenu} sx={{
+                                        <MenuItem key={page} onClick={handleCloseNavMenu} sx={{
                                             ":hover": {
                                                 backgroundColor: "#ffffff46"
                                             }
                                         }}>
-                                            {console.log("/" + page)}
+
                                             <Typography textAlign="center" textTransform={"capitalize"}>{page}</Typography>
                                         </MenuItem>
                                     </Link>
@@ -152,7 +152,7 @@ const Appbar = () => {
                     {/* Desktop Nav*/}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Link href={"/" + page}>
+                            <Link href={"/" + page} key={page}>
                                 <Button
                                     key={page}
                                     onClick={handleCloseNavMenu}
@@ -192,7 +192,7 @@ const Appbar = () => {
                             onClose={handleCloseUserMenu}
                         >
                             {settings.map((setting) => (
-                                <Link href={`/${setting}`}>
+                                <Link href={`/${setting}`} key={setting}>
                                     <MenuItem key={setting} onClick={handleCloseUserMenu} >
 
                                         {/* <Typography textAlign="center">{setting}</Typography> */}

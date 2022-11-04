@@ -19,10 +19,11 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+    /* opacity: 0.8; */
   }
 
   body {
-    color: white;
-    background: rgb(32, 32, 32);
+    color: inherit;
+    background: inherit;
   }
 }

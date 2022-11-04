@@ -47,7 +47,7 @@ const CarouselBox = () => {
                     display: {
                         md: "block",
                         xs: "none"
-                    }
+                    }, 
                 }}>
                     {
                         items.map((item, i) => <Item key={i} item={item} />)
@@ -83,7 +83,8 @@ function Item(props) {
                 display: {
                     md: "flex",
                     cursor: "pointer"
-                }
+                },
+               
             }}>
 
                 {/* Show Info */}
