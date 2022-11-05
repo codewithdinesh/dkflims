@@ -4,7 +4,7 @@ import Header from "./Header"
 
 // export default function Layout({ children }) {
 //     return (
-        
+
 //     )
 // }
 
@@ -15,7 +15,8 @@ export default class Layout extends Component {
         return (
             <>
                 <Header />
-                <Container maxWidth={"xl"} >
+                {/* */}
+                <Container maxWidth={"xl"}  >
 
                     <main>{this.props.children}</main>
 

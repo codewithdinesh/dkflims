@@ -63,7 +63,9 @@ export default function Explore() {
                     },
                     marginTop: 1,
                     // backgroundColor: "black",
-                    zIndex: 0
+                    zIndex: 0,
+                    overflow: "hidden",
+
 
 
                 }}>
@@ -84,10 +86,14 @@ export default function Explore() {
                         marginBottom: {
                             xs: "10px"
                         },
+                        paddingRight: {
+                            md: "50px"
+                        },
 
                         color: "inherit",
                         overflow: "hidden",
                         backgroundColor: "inherit",
+
 
 
 
@@ -301,13 +307,16 @@ export default function Explore() {
                             backgroundColor: "inherit",
                             color: "inherit",
                             zIndex: 2,
+                            // overflow:"hidden"
+
 
                         }} >
 
                         <div className='backgroundImage-container' style={{
-                            boxShadow: "rgba(0, 0, 0, 17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 15) 0px 36px 30px 0px inset, rgba(0, 0, 0, 1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px",
+                            boxShadow: "rgba(0, 0, 0, 17) -23px -23px 58px 0px inset, rgba(0, 0, 0, 15) 26px 36px 30px 0px inset, rgba(0, 0, 0, 1) 10px -79px 70px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px, rgba(0, 0, 0, 15) -16px 0px 60px 34px",
                             zIndex: 1,
-                            borderRadius: "5px"
+                            borderRadius: "5px",
+                            // overflow:"hidden"
                         }}>
 
                             <img src={item.background} width={"100%"} height={"100%"} style={{
