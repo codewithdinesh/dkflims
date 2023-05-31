@@ -260,7 +260,7 @@ export default function Explore() {
 
                             {
                                 item?.cast.map(cast => {
-                                    return <Typography
+                                    return <Typography key={cast}
                                         sx={{
                                             padding: "10px",
                                             margin: "2px",
